@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autowire: true      # Automatically inject dependencies
+        autoconfigure: true # Automatically register services
+
+    # Register all services except the excluded directories
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # Explicitly declare controllers as services
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']

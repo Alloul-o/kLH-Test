@@ -1,0 +1,29 @@
+api_voitures_index:
+    path: /api/voitures
+    controller: App\Controller\CrudVoitureController::index
+    methods: GET
+
+api_voitures_show:
+    path: /api/voitures/{id}
+    controller: App\Controller\CrudVoitureController::show
+    methods: GET
+
+api_voitures_create:
+    path: /api/voitures
+    controller: App\Controller\CrudVoitureController::create
+    methods: POST
+
+api_voitures_update:
+    path: /api/voitures/{id}
+    controller: App\Controller\CrudVoitureController::update
+    methods: PUT
+
+api_voitures_delete:
+    path: /api/voitures/{id}
+    controller: App\Controller\CrudVoitureController::delete
+    methods: DELETE
+
+api_voitures_calculate_time:
+    path: /api/voitures/calculate-time
+    controller: App\Controller\CrudVoitureController::calculateTime
+    methods: POST
